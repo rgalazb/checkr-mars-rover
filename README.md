@@ -23,7 +23,7 @@ $ ruby ./test/models/rover_test.rb
 ```
 to test `follow_instructions` command
 ```
-$ ruby test/services/controlable/follow_instruction_test.rb
+$ ruby test/services/controlable/follow_instructions_test.rb
 ```
 
 #### assumptions
