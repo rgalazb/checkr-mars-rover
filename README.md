@@ -15,11 +15,15 @@ $ ruby main.rb ./instructions.txt
 I used minitest for unit testing the two main classes of this proyect.
 to test `plateau` class
 ```
-$ ruby ./test/plateau_test.rb
+$ ruby ./test/models/plateau_test.rb
 ```
 to test `rover` class
 ```
-$ ruby ./test/rover_test.rb
+$ ruby ./test/models/rover_test.rb
+```
+to test `follow_instructions` command
+```
+$ ruby test/services/controlable/follow_instruction_test.rb
 ```
 
 #### assumptions
