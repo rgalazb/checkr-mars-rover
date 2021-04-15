@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 require './models/rover'
 require './models/plateau'
-require './services/controlable/follow_instructions'
+require './services/controllable/follow_instructions'
 
 instructions = File.readlines(ARGV[0]).map { |line| line.gsub("\n", '') }
 
@@ -13,7 +13,7 @@ final_positions = instructions[1..-1].each_slice(2).map do |intial_point, instru
   rover_instructions = instruction.split('')
 
   rover = Rover.new(coordinate_x: x.to_i, coordinate_y: y.to_i, orientation: direction)
-  Controlable::FollowInstructions.call(vehicle: rover, instructions: rover_instructions, surface: plateau)
+  Controllable::FollowInstructions.call(vehicle: rover, instructions: rover_instructions, surface: plateau)
 end
 
 final_positions.each do |position|

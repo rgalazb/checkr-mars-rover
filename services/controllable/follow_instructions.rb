@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module Controlable
+module Controllable
   # command to make any kind of vehicle follow the given instructions
   # returns the final position of the vehicle.
   class FollowInstructions

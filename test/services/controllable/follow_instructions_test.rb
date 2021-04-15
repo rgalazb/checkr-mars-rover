@@ -1,9 +1,9 @@
 require 'minitest/autorun'
 require_relative '../../../models/rover'
 require_relative '../../../models/plateau'
-require_relative '../../../services/controlable/follow_instructions'
+require_relative '../../../services/controllable/follow_instructions'
 
-module Controlable
+module Controllable
   class FollowInstructionsTest < Minitest::Test
     describe 'follow correct instructions' do
       def setup
@@ -13,13 +13,13 @@ module Controlable
 
       it 'should return right final  position' do
         instructions = 'LMLMLMLMM'.split('')
-        result = Controlable::FollowInstructions.call(vehicle: @rover, instructions: instructions, surface: @plateau)
+        result = Controllable::FollowInstructions.call(vehicle: @rover, instructions: instructions, surface: @plateau)
         assert_equal '1 3 N', result
       end
 
       it 'should broke the rover' do
         instructions = 'LMLMLMLMMMMMMMMMM'.split('')
-        result = Controlable::FollowInstructions.call(vehicle: @rover, instructions: instructions, surface: @plateau)
+        result = Controllable::FollowInstructions.call(vehicle: @rover, instructions: instructions, surface: @plateau)
         assert_equal 'this rover has fallen off the plateau 💥', result
       end
     end
