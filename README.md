@@ -8,7 +8,7 @@ I used the `app.rb` as it was my controller, so tried to keep the logic simple a
 #### How To Run This Proyect
 to run this proyect you need to provide an instructions file, like the one on `./instructions.txt`. 
 ```
-$ ruby main.rb ./instructions.txt
+$ ruby app.rb ./instructions.txt
 ```
 
 #### Run Test
